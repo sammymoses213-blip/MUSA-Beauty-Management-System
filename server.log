@@ -1,0 +1,233 @@
+nohup: ignoring input
+[Fri Jun  5 11:00:01 2026] PHP 8.3.6 Development Server (http://0.0.0.0:8000) started
+[Fri Jun  5 11:12:24 2026] 127.0.0.1:58770 Accepted
+[Fri Jun  5 11:12:24 2026] 127.0.0.1:58770 [404]: GET /favicon.ico - No such file or directory
+[Fri Jun  5 11:12:24 2026] 127.0.0.1:58770 Closing
+[Fri Jun  5 11:12:27 2026] 127.0.0.1:53978 Accepted
+[Fri Jun  5 11:12:27 2026] 127.0.0.1:53978 [200]: GET /
+[Fri Jun  5 11:12:27 2026] 127.0.0.1:53978 Closing
+[Fri Jun  5 11:12:28 2026] 127.0.0.1:53992 Accepted
+[Fri Jun  5 11:12:28 2026] 127.0.0.1:53992 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:12:28 2026] 127.0.0.1:53992 Closing
+[Fri Jun  5 11:12:28 2026] 127.0.0.1:53994 Accepted
+[Fri Jun  5 11:12:28 2026] 127.0.0.1:53994 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:12:28 2026] 127.0.0.1:53994 Closing
+[Fri Jun  5 11:12:52 2026] 127.0.0.1:42714 Accepted
+[Fri Jun  5 11:12:52 2026] 127.0.0.1:42714 [200]: GET /login.php
+[Fri Jun  5 11:12:52 2026] 127.0.0.1:42714 Closing
+[Fri Jun  5 11:12:52 2026] 127.0.0.1:42726 Accepted
+[Fri Jun  5 11:12:52 2026] 127.0.0.1:42726 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:12:52 2026] 127.0.0.1:42726 Closing
+[Fri Jun  5 11:12:52 2026] 127.0.0.1:42738 Accepted
+[Fri Jun  5 11:12:52 2026] 127.0.0.1:42738 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:12:52 2026] 127.0.0.1:42738 Closing
+[Fri Jun  5 11:13:46 2026] 127.0.0.1:40398 Accepted
+[Fri Jun  5 11:13:46 2026] 127.0.0.1:40398 [302]: POST /login.php
+[Fri Jun  5 11:13:46 2026] 127.0.0.1:40398 Closing
+[Fri Jun  5 11:13:46 2026] 127.0.0.1:40400 Accepted
+[Fri Jun  5 11:13:46 2026] 127.0.0.1:40400 [200]: GET /client/dashboard.php
+[Fri Jun  5 11:13:46 2026] 127.0.0.1:40400 Closing
+[Fri Jun  5 11:13:47 2026] 127.0.0.1:40412 Accepted
+[Fri Jun  5 11:13:47 2026] 127.0.0.1:40412 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:13:47 2026] 127.0.0.1:40412 Closing
+[Fri Jun  5 11:13:47 2026] 127.0.0.1:40420 Accepted
+[Fri Jun  5 11:13:47 2026] 127.0.0.1:40420 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:13:47 2026] 127.0.0.1:40420 Closing
+[Fri Jun  5 11:14:26 2026] 127.0.0.1:44426 Accepted
+[Fri Jun  5 11:14:26 2026] 127.0.0.1:44426 [200]: GET /services.php
+[Fri Jun  5 11:14:26 2026] 127.0.0.1:44426 Closing
+[Fri Jun  5 11:14:26 2026] 127.0.0.1:44440 Accepted
+[Fri Jun  5 11:14:26 2026] 127.0.0.1:44440 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:14:26 2026] 127.0.0.1:44440 Closing
+[Fri Jun  5 11:14:27 2026] 127.0.0.1:44444 Accepted
+[Fri Jun  5 11:14:27 2026] 127.0.0.1:44444 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:14:27 2026] 127.0.0.1:44444 Closing
+[Fri Jun  5 11:14:29 2026] 127.0.0.1:51958 Accepted
+[Fri Jun  5 11:14:29 2026] 127.0.0.1:51958 [200]: GET /services.php?category=Beauty
+[Fri Jun  5 11:14:29 2026] 127.0.0.1:51958 Closing
+[Fri Jun  5 11:14:29 2026] 127.0.0.1:51970 Accepted
+[Fri Jun  5 11:14:29 2026] 127.0.0.1:51970 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:14:29 2026] 127.0.0.1:51970 Closing
+[Fri Jun  5 11:14:29 2026] 127.0.0.1:51974 Accepted
+[Fri Jun  5 11:14:29 2026] 127.0.0.1:51974 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:14:29 2026] 127.0.0.1:51974 Closing
+[Fri Jun  5 11:14:30 2026] 127.0.0.1:51988 Accepted
+[Fri Jun  5 11:14:30 2026] 127.0.0.1:51988 [200]: GET /services.php?category=Grooming
+[Fri Jun  5 11:14:30 2026] 127.0.0.1:51988 Closing
+[Fri Jun  5 11:14:31 2026] 127.0.0.1:52002 Accepted
+[Fri Jun  5 11:14:31 2026] 127.0.0.1:52002 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:14:31 2026] 127.0.0.1:52002 Closing
+[Fri Jun  5 11:14:31 2026] 127.0.0.1:52010 Accepted
+[Fri Jun  5 11:14:31 2026] 127.0.0.1:52010 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:14:31 2026] 127.0.0.1:52010 Closing
+[Fri Jun  5 11:14:33 2026] 127.0.0.1:52026 Accepted
+[Fri Jun  5 11:14:33 2026] 127.0.0.1:52026 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jun  5 11:14:33 2026] 127.0.0.1:52026 Closing
+[Fri Jun  5 11:14:33 2026] 127.0.0.1:52038 Accepted
+[Fri Jun  5 11:14:33 2026] 127.0.0.1:52038 [200]: GET /services.php?category=Hair
+[Fri Jun  5 11:14:33 2026] 127.0.0.1:52038 Closing
+[Fri Jun  5 11:14:33 2026] 127.0.0.1:52048 Accepted
+[Fri Jun  5 11:14:33 2026] 127.0.0.1:52048 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:14:33 2026] 127.0.0.1:52048 Closing
+[Fri Jun  5 11:14:33 2026] 127.0.0.1:52064 Accepted
+[Fri Jun  5 11:14:33 2026] 127.0.0.1:52064 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:14:33 2026] 127.0.0.1:52064 Closing
+[Fri Jun  5 11:14:34 2026] 127.0.0.1:52070 Accepted
+[Fri Jun  5 11:14:34 2026] 127.0.0.1:52070 [200]: GET /services.php?category=Makeup
+[Fri Jun  5 11:14:34 2026] 127.0.0.1:52070 Closing
+[Fri Jun  5 11:14:35 2026] 127.0.0.1:52086 Accepted
+[Fri Jun  5 11:14:35 2026] 127.0.0.1:52086 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:14:35 2026] 127.0.0.1:52086 Closing
+[Fri Jun  5 11:14:35 2026] 127.0.0.1:52090 Accepted
+[Fri Jun  5 11:14:35 2026] 127.0.0.1:52090 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:14:35 2026] 127.0.0.1:52090 Closing
+[Fri Jun  5 11:14:36 2026] 127.0.0.1:52100 Accepted
+[Fri Jun  5 11:14:36 2026] 127.0.0.1:52100 [200]: GET /services.php?category=Package
+[Fri Jun  5 11:14:36 2026] 127.0.0.1:52100 Closing
+[Fri Jun  5 11:14:36 2026] 127.0.0.1:52106 Accepted
+[Fri Jun  5 11:14:36 2026] 127.0.0.1:52112 Accepted
+[Fri Jun  5 11:14:36 2026] 127.0.0.1:52106 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:14:36 2026] 127.0.0.1:52106 Closing
+[Fri Jun  5 11:14:36 2026] 127.0.0.1:52112 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:14:36 2026] 127.0.0.1:52112 Closing
+[Fri Jun  5 11:14:59 2026] 127.0.0.1:45532 Accepted
+[Fri Jun  5 11:14:59 2026] 127.0.0.1:45532 [200]: GET /client/dashboard.php
+[Fri Jun  5 11:14:59 2026] 127.0.0.1:45532 Closing
+[Fri Jun  5 11:14:59 2026] 127.0.0.1:45548 Accepted
+[Fri Jun  5 11:14:59 2026] 127.0.0.1:45548 [200]: GET /client/dashboard.php
+[Fri Jun  5 11:14:59 2026] 127.0.0.1:45548 Closing
+[Fri Jun  5 11:14:59 2026] 127.0.0.1:45552 Accepted
+[Fri Jun  5 11:14:59 2026] 127.0.0.1:45568 Accepted
+[Fri Jun  5 11:14:59 2026] 127.0.0.1:45552 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:14:59 2026] 127.0.0.1:45552 Closing
+[Fri Jun  5 11:14:59 2026] 127.0.0.1:45568 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:14:59 2026] 127.0.0.1:45568 Closing
+[Fri Jun  5 11:15:04 2026] 127.0.0.1:45574 Accepted
+[Fri Jun  5 11:15:04 2026] 127.0.0.1:45574 [302]: GET /logout.php
+[Fri Jun  5 11:15:04 2026] 127.0.0.1:45574 Closing
+[Fri Jun  5 11:15:04 2026] 127.0.0.1:45584 Accepted
+[Fri Jun  5 11:15:04 2026] 127.0.0.1:45584 [200]: GET /login.php
+[Fri Jun  5 11:15:04 2026] 127.0.0.1:45584 Closing
+[Fri Jun  5 11:15:04 2026] 127.0.0.1:45588 Accepted
+[Fri Jun  5 11:15:04 2026] 127.0.0.1:45588 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:15:04 2026] 127.0.0.1:45588 Closing
+[Fri Jun  5 11:15:04 2026] 127.0.0.1:45596 Accepted
+[Fri Jun  5 11:15:04 2026] 127.0.0.1:45596 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:15:04 2026] 127.0.0.1:45596 Closing
+[Fri Jun  5 11:15:08 2026] 127.0.0.1:37720 Accepted
+[Fri Jun  5 11:15:08 2026] 127.0.0.1:37720 [200]: GET /index.php
+[Fri Jun  5 11:15:08 2026] 127.0.0.1:37720 Closing
+[Fri Jun  5 11:15:08 2026] 127.0.0.1:37730 Accepted
+[Fri Jun  5 11:15:08 2026] 127.0.0.1:37730 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:15:08 2026] 127.0.0.1:37730 Closing
+[Fri Jun  5 11:15:08 2026] 127.0.0.1:37740 Accepted
+[Fri Jun  5 11:15:08 2026] 127.0.0.1:37740 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:15:08 2026] 127.0.0.1:37740 Closing
+[Fri Jun  5 11:15:19 2026] 127.0.0.1:35086 Accepted
+[Fri Jun  5 11:15:19 2026] 127.0.0.1:35086 [200]: GET /login.php
+[Fri Jun  5 11:15:19 2026] 127.0.0.1:35086 Closing
+[Fri Jun  5 11:15:19 2026] 127.0.0.1:35100 Accepted
+[Fri Jun  5 11:15:19 2026] 127.0.0.1:35114 Accepted
+[Fri Jun  5 11:15:19 2026] 127.0.0.1:35100 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:15:19 2026] 127.0.0.1:35100 Closing
+[Fri Jun  5 11:15:19 2026] 127.0.0.1:35114 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:15:19 2026] 127.0.0.1:35114 Closing
+[Fri Jun  5 11:15:53 2026] 127.0.0.1:59020 Accepted
+[Fri Jun  5 11:15:53 2026] 127.0.0.1:59020 [200]: POST /login.php
+[Fri Jun  5 11:15:53 2026] 127.0.0.1:59020 Closing
+[Fri Jun  5 11:15:54 2026] 127.0.0.1:59032 Accepted
+[Fri Jun  5 11:15:54 2026] 127.0.0.1:59048 Accepted
+[Fri Jun  5 11:15:54 2026] 127.0.0.1:59032 [200]: GET /assets/js/main.js
+[Fri Jun  5 11:15:54 2026] 127.0.0.1:59032 Closing
+[Fri Jun  5 11:15:54 2026] 127.0.0.1:59048 [200]: GET /assets/css/style.css
+[Fri Jun  5 11:15:54 2026] 127.0.0.1:59048 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49940 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49954 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49954 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49954 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49968 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49976 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49984 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50000 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50004 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50020 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49940 [200]: HEAD /
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49940 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49968 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49968 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49976 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49976 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49984 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:49984 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50000 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50000 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50004 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50004 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50020 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50020 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50024 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50026 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50028 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50030 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50044 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50024 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50024 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50026 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50026 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50028 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50028 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50030 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50030 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50044 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50044 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50056 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50072 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50088 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50100 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50112 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50056 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50056 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50072 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50072 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50088 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50088 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50100 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50100 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50112 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50112 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50128 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50132 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50136 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50140 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50128 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50128 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50132 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50132 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50136 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50136 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50140 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50140 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50146 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50154 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50156 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50168 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50146 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50146 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50154 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50154 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50156 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50156 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50168 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50168 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50182 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50190 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50202 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50216 Accepted
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50182 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50182 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50190 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50190 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50202 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50202 Closing
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50216 Invalid request (Unsupported SSL request)
+[Fri Jun  5 11:30:16 2026] 127.0.0.1:50216 Closing
