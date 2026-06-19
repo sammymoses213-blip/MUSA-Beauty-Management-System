@@ -15,7 +15,10 @@ $recentAppointments = $recent->fetchAll();
     <div class="container">
         <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; margin-bottom:1rem;">
             <h1 class="section-title" style="margin:0;">Reports</h1>
-            <button type="button" class="primary-btn" onclick="window.print();">Print Report</button>
+            <div style="display:flex; gap:0.5rem;">
+                <button type="button" class="primary-btn" onclick="window.print();">Print Report</button>
+                <a href="/admin/download_reports.php" class="primary-btn" style="display:inline-block;">Download All Reports</a>
+            </div>
         </div>
         <div class="card-grid info-grid">
             <div class="report-card card"><h3>Total appointments</h3><p><?php echo $totalAppointments; ?></p></div>

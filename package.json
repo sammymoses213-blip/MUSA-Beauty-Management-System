@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "MUSA Beauty Management System - PHP + MySQL salon booking platform",
   "scripts": {
-    "start": "php8.3 -d xdebug.mode=off -S 0.0.0.0:8000 -t .",
+    "start": "C:/xampp/php/php.exe -d xdebug.mode=off -S 0.0.0.0:8000 -t .",
     "serve": "npm run start"
   },
-  "author": "MUSA Beauty",
+  "author": "Moses Musau",
   "license": "MIT"
 }
