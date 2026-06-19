@@ -24,6 +24,7 @@ $currentPath = basename($_SERVER['PHP_SELF']);
                 <?php if ($user): ?>
                     <?php if ($user['role'] === 'admin'): ?>
                         <a href="/admin/dashboard.php">Dashboard</a>
+                        <a href="/admin/reports.php?print=1">Print Reports</a>
                     <?php elseif ($user['role'] === 'stylist'): ?>
                         <a href="/stylist/dashboard.php">Dashboard</a>
                     <?php else: ?>

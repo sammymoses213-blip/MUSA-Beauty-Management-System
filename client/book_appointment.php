@@ -13,9 +13,9 @@ $messageType = 'info'; // 'success', 'error', 'info'
 $selectedServiceId = isset($_GET['service_id']) ? (int) $_GET['service_id'] : 0;
 $selectedStylistId = isset($_GET['stylist_id']) ? (int) $_GET['stylist_id'] : 0;
 
-// Use db instead of pdo for consistency
-$services = $db->query('SELECT * FROM services WHERE is_active = 1 ORDER BY category, name')->fetchAll(PDO::FETCH_ASSOC);
-$stylists = $db->query('SELECT u.id AS stylist_user_id, s.id AS stylist_id, u.name AS stylist_name, s.specialization FROM stylists s JOIN users u ON s.user_id = u.id WHERE u.role = "stylist" ORDER BY u.name')->fetchAll(PDO::FETCH_ASSOC);
+// Use PDO instance from config
+$services = $pdo->query('SELECT * FROM services WHERE is_active = 1 ORDER BY category, name')->fetchAll(PDO::FETCH_ASSOC);
+$stylists = $pdo->query('SELECT u.id AS stylist_user_id, s.id AS stylist_id, u.name AS stylist_name, s.specialization FROM stylists s JOIN users u ON s.user_id = u.id WHERE u.role = "stylist" ORDER BY u.name')->fetchAll(PDO::FETCH_ASSOC);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $serviceId = (int) ($_POST['service_id'] ?? 0);
@@ -49,11 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $amount = $serviceData['price'] ?? 0;
 
                 // Create appointment first
-                $stmt = $db->prepare('
-                    INSERT INTO appointments 
-                    (client_id, stylist_id, service_id, appointment_date, status, payment_method, payment_status, amount_paid) 
-                    VALUES (?, ?, ?, ?, "booked", ?, "unpaid", 0)
-                ');
+                $stmt = $pdo->prepare(
+                    'INSERT INTO appointments (client_id, stylist_id, service_id, appointment_date, status, payment_method, payment_status, amount_paid) VALUES (?, ?, ?, ?, "booked", ?, "unpaid", 0)'
+                );
                 $stmt->execute([
                     $_SESSION['user']['id'],
                     $stylistId,
@@ -62,10 +60,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $paymentMethod
                 ]);
 
-                $appointmentId = (int) $db->lastInsertId();
+                $appointmentId = (int) $pdo->lastInsertId();
 
                 // Now process payment using new PaymentProcessor
-                $processor = new PaymentProcessor($db);
+                $processor = new PaymentProcessor($pdo);
                 $payment_result = null;
 
                 if ($paymentMethod === 'mpesa') {
@@ -102,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Handle payment result
                 if ($payment_result && $payment_result['ok']) {
                     // Get payment ID for reference
-                    $payment = new Payment($db);
+                        $payment = new Payment($pdo);
                     $payment_details = $payment->getPaymentByAppointment($appointmentId);
                     
                     if ($paymentMethod === 'mpesa') {
@@ -122,14 +120,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // Send notifications if booking succeeded
                 if ($messageType === 'success') {
-                    $detailStmt = $db->prepare('
-                        SELECT client.phone AS client_phone, client.name AS client_name, 
-                               stylist.phone AS stylist_phone, s.name AS service_name, stylist.name AS stylist_name 
-                        FROM users client 
-                        JOIN services s ON s.id = ? 
-                        JOIN users stylist ON stylist.id = ? 
-                        WHERE client.id = ?
-                    ');
+                    $detailStmt = $pdo->prepare(
+                        'SELECT client.phone AS client_phone, client.name AS client_name, stylist.phone AS stylist_phone, s.name AS service_name, stylist.name AS stylist_name FROM users client JOIN services s ON s.id = ? JOIN users stylist ON stylist.id = ? WHERE client.id = ?'
+                    );
                     $detailStmt->execute([$serviceId, $stylistId, $_SESSION['user']['id']]);
                     $details = $detailStmt->fetch(PDO::FETCH_ASSOC);
                     

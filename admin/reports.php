@@ -16,7 +16,6 @@ $recentAppointments = $recent->fetchAll();
         <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; margin-bottom:1rem;">
             <h1 class="section-title" style="margin:0;">Reports</h1>
             <div style="display:flex; gap:0.5rem;">
-                <button type="button" class="primary-btn" onclick="window.print();">Print Report</button>
                 <a href="/admin/download_reports.php" class="primary-btn" style="display:inline-block;">Download All Reports</a>
             </div>
         </div>
@@ -50,3 +49,10 @@ $recentAppointments = $recent->fetchAll();
     </div>
 </section>
 <?php include __DIR__ . '/../includes/footer.php'; ?>
+<?php if (isset($_GET['print']) && $_GET['print'] == '1'): ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        window.print();
+    });
+</script>
+<?php endif; ?>
