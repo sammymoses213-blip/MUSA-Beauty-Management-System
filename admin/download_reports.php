@@ -27,19 +27,33 @@ function array_to_csv_string($rows, $headers = []) {
     return $contents;
 }
 
-$users = $pdo->query('SELECT id, name, email, role, created_at FROM users')->fetchAll();
-$userRows = array_map(function($u){ return [$u['id'],$u['name'],$u['email'],$u['role'],$u['created_at']]; }, $users);
-$services = $pdo->query('SELECT id, name, price, created_at FROM services')->fetchAll();
-$serviceRows = array_map(function($s){ return [$s['id'],$s['name'],$s['price'],$s['created_at']]; }, $services);
-$appointments = $pdo->query('SELECT id, client_id, stylist_id, service_id, appointment_date, status, created_at FROM appointments')->fetchAll();
-$appointmentRows = array_map(function($a){ return [$a['id'],$a['client_id'],$a['stylist_id'],$a['service_id'],$a['appointment_date'],$a['status'],$a['created_at']]; }, $appointments);
+$users = $pdo->query('SELECT id, name, email, role FROM users')->fetchAll();
+$userRows = array_map(function($u){ return [$u['id'],$u['name'],$u['email'],$u['role']]; }, $users);
+$services = $pdo->query('SELECT id, name, price FROM services')->fetchAll();
+$serviceRows = array_map(function($s){ return [$s['id'],$s['name'],$s['price']]; }, $services);
+$appointments = $pdo->query('SELECT id, client_id, stylist_id, service_id, appointment_date, status FROM appointments')->fetchAll();
+$appointmentRows = array_map(function($a){ return [$a['id'],$a['client_id'],$a['stylist_id'],$a['service_id'],$a['appointment_date'],$a['status']]; }, $appointments);
 
-$csvUsers = array_to_csv_string($userRows, ['id','name','email','role','created_at']);
-$csvServices = array_to_csv_string($serviceRows, ['id','name','price','created_at']);
-$csvAppointments = array_to_csv_string($appointmentRows, ['id','client_id','stylist_id','service_id','appointment_date','status','created_at']);
+$csvUsers = array_to_csv_string($userRows, ['id','name','email','role']);
+$csvServices = array_to_csv_string($serviceRows, ['id','name','price']);
+$csvAppointments = array_to_csv_string($appointmentRows, ['id','client_id','stylist_id','service_id','appointment_date','status']);
 
 $summaryText = "MUSA Beauty - Reports Summary\nGenerated: " . date('c') . "\n\n";
 foreach ($summary as $k => $v) { $summaryText .= strtoupper($k) . ": " . $v . "\n"; }
+
+// Fall back if ZipArchive is not available
+if (!class_exists('ZipArchive')) {
+    header('Content-Type: text/plain');
+    header('Content-Disposition: attachment; filename="musa-reports-' . date('Ymd-His') . '.txt"');
+    echo $summaryText;
+    echo "\n--- USERS ---\n";
+    echo $csvUsers;
+    echo "\n--- SERVICES ---\n";
+    echo $csvServices;
+    echo "\n--- APPOINTMENTS ---\n";
+    echo $csvAppointments;
+    exit;
+}
 
 // Create ZIP in temp file
 $zip = new ZipArchive();

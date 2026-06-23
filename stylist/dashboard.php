@@ -2,12 +2,12 @@
 require_once __DIR__ . '/../includes/auth.php';
 requireRole('stylist');
 
-$stylistStmt = $pdo->prepare('SELECT s.*, u.name FROM stylists s JOIN users u ON s.user_id = u.id WHERE u.id = :user_id LIMIT 1');
+$stylistStmt = $pdo->prepare('SELECT s.user_id, s.specialization, u.name FROM stylists s JOIN users u ON s.user_id = u.id WHERE u.id = :user_id LIMIT 1');
 $stylistStmt->execute([':user_id' => $_SESSION['user']['id']]);
 $profile = $stylistStmt->fetch();
 
 $appointmentsStmt = $pdo->prepare('SELECT a.*, s.name AS service_name, u.name AS client_name FROM appointments a JOIN services s ON a.service_id = s.id JOIN users u ON a.client_id = u.id WHERE a.stylist_id = :stylist_id AND a.status = "booked" ORDER BY a.appointment_date LIMIT 5');
-$appointmentsStmt->execute([':stylist_id' => $profile['id']]);
+$appointmentsStmt->execute([':stylist_id' => $profile['user_id']]);
 $appointments = $appointmentsStmt->fetchAll();
 ?>
 <?php include __DIR__ . '/../includes/header.php'; ?>

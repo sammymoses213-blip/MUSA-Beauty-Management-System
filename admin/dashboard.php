@@ -28,6 +28,7 @@ $recentAppointments = $recentStmt->fetchAll();
             <a href="/admin/manage_users.php" class="feature-card card">Manage Users</a>
             <a href="/admin/manage_services.php" class="feature-card card">Manage Services</a>
             <a href="/admin/reports.php" class="feature-card card">View Reports</a>
+            <a href="/admin/download_reports.php" class="feature-card card">Download Reports</a>
         </div>
         <div class="section-head" style="margin-top:2rem;">
             <h2 class="section-title">Latest appointments</h2>

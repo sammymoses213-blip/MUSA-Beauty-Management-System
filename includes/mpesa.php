@@ -91,7 +91,7 @@ function mpesaInitiateStkPush(int $amount, string $phone, string $accountReferen
 
     $timestamp = gmdate('YmdHis');
     $password = base64_encode($config['shortcode'] . $config['passkey'] . $timestamp);
-    $callbackUrl = $config['callback_url'] ?: (isset($_SERVER['HTTP_HOST']) ? 'https://' . $_SERVER['HTTP_HOST'] . '/client/mpesa_callback.php' : '');
+    $callbackUrl = $config['callback_url'] ?: (isset($_SERVER['HTTP_HOST']) ? 'http://' . $_SERVER['HTTP_HOST'] . '/client/mpesa_callback.php' : '');
     $body = [
         'BusinessShortCode' => (int) $config['shortcode'],
         'Password' => $password,
@@ -133,9 +133,12 @@ function mpesaInitiateStkPush(int $amount, string $phone, string $accountReferen
     }
 
     $response = json_decode($stkResponse, true);
+    $responseCode = $response['ResponseCode'] ?? null;
+    $success = $responseCode === '0' || $responseCode === 0;
+
     return [
-        'ok' => !empty($response['ResponseCode']) && $response['ResponseCode'] === '0',
-        'message' => $response['ResponseDescription'] ?? 'MPesa request submitted.',
+        'ok' => $success,
+        'message' => $response['ResponseDescription'] ?? $response['CustomerMessage'] ?? 'MPesa request submitted.',
         'response' => $response,
         'phone' => $phone,
         'amount' => (int) $amount,

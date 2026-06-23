@@ -85,7 +85,7 @@ The booking flow uses the Daraja STK Push API and stores callback data in `mpesa
 ## Default credentials
 
 - Admin: `admin@example.com` / `admin123`
-
+- Stylist: `mia@beauty.com` / `stylist123`
 ## Notes
 
 - Passwords are hashed with `password_hash()`.

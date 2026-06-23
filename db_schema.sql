@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS reviews (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT IGNORE INTO users (name, email, phone, password, role)
-VALUES ('Salon Admin', 'admin@example.com', '+254700000000', '$2y$10$r6nsIJDUEhdCapI68YgBO.jRVcmvXRXB6LiwAgFzwCnd3G336lkSm', 'admin');
+VALUES ('Salon Admin', 'admin@example.com', '+254700000000', '$2y$10$gzeWCCEwPURPImJyctvr0e/GEeXwtA6hLL8H5Xla884z3IApKtV7G', 'admin');
 
 INSERT IGNORE INTO services (name, category, price, duration, description, image) VALUES
 ('Haircut (Ladies)', 'Hair', 1500, '45 mins', 'Classic ladies haircut with precision styling.', NULL),
@@ -113,7 +113,7 @@ INSERT IGNORE INTO services (name, category, price, duration, description, image
 ('Premium Spa Package', 'Package', 12500, '3 hours', 'Luxury spa package with premium treatments.', NULL);
 
 INSERT IGNORE INTO users (name, email, password, role) VALUES
-('Mia Stylists', 'mia@beauty.com', '$2y$10$O4jLS7nuXB6b4x1qT8b1ZekbVvUr1Xrj4xGxXppp2Qb/t6JxD1tQG', 'stylist');
+('Mia Stylists', 'mia@beauty.com', '$2y$10$J4Rb0DGqlf9YswLYwANgMe8Hb8QNofNN2fJJkHynpClCLUDqUcLK6', 'stylist');
 
 INSERT IGNORE INTO stylists (user_id, specialization) VALUES
 ((SELECT id FROM users WHERE email = 'mia@beauty.com'), 'Hair styling and color');

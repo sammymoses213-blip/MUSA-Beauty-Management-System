@@ -14,7 +14,7 @@ $selectedServiceId = isset($_GET['service_id']) ? (int) $_GET['service_id'] : 0;
 $selectedStylistId = isset($_GET['stylist_id']) ? (int) $_GET['stylist_id'] : 0;
 
 // Use PDO instance from config
-$services = $pdo->query('SELECT * FROM services WHERE is_active = 1 ORDER BY category, name')->fetchAll(PDO::FETCH_ASSOC);
+$services = $pdo->query('SELECT * FROM services ORDER BY category, name')->fetchAll(PDO::FETCH_ASSOC);
 $stylists = $pdo->query('SELECT u.id AS stylist_user_id, s.id AS stylist_id, u.name AS stylist_name, s.specialization FROM stylists s JOIN users u ON s.user_id = u.id WHERE u.role = "stylist" ORDER BY u.name')->fetchAll(PDO::FETCH_ASSOC);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $messageType = 'error';
         } else {
             // Check for double booking
-            $check = $db->prepare('SELECT COUNT(*) as cnt FROM appointments WHERE stylist_id = ? AND appointment_date = ? AND status != "cancelled"');
+            $check = $pdo->prepare('SELECT COUNT(*) as cnt FROM appointments WHERE stylist_id = ? AND appointment_date = ? AND status != "cancelled"');
             $check->execute([$stylistId, $appointmentDate]);
             $result = $check->fetch(PDO::FETCH_ASSOC);
             
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $messageType = 'error';
             } else {
                 // Get service details
-                $service = $db->prepare('SELECT price, name FROM services WHERE id = ?');
+                $service = $pdo->prepare('SELECT price, name FROM services WHERE id = ?');
                 $service->execute([$serviceId]);
                 $serviceData = $service->fetch(PDO::FETCH_ASSOC);
                 $amount = $serviceData['price'] ?? 0;
